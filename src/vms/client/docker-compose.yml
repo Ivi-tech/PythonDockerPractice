@@ -1,0 +1,45 @@
+version: "3"
+
+services:
+  temperature_sensor1:
+    image: valery1080/mysensors:sen1
+    environment:
+      - MQTT_HOST=192.168.0.122
+      - TYPE=temperature
+      - MQTT_PERIOD=3
+      - NAME=TemperatureSen1
+  temperature_sensor2:
+    image: valery1080/mysensors:sen1
+    environment:
+      - MQTT_HOST=192.168.0.122
+      - TYPE=temperature
+      - MQTT_PERIOD=4
+      - NAME=TemperatureSen2
+  current_sensor1:
+    image: valery1080/mysensors:sen1
+    environment:
+      - MQTT_HOST=192.168.0.122
+      - TYPE=current
+      - MQTT_PERIOD=3
+      - NAME=CurrentSen1
+  noise_sensor1:
+    image: valery1080/mysensors:sen1
+    environment:
+      - MQTT_HOST=192.168.0.122
+      - TYPE=noise
+      - MQTT_PERIOD=7
+      - NAME=NoiseSen1
+  humidity_sensor1:
+    image: valery1080/mysensors:sen1
+    environment:
+      - MQTT_HOST=192.168.0.122
+      - TYPE=humidity
+      - MQTT_PERIOD=10
+      - NAME=HumiditySen1
+  humidity_sensor2:
+    image: valery1080/mysensors:sen1
+    environment:
+      - MQTT_HOST=192.168.0.122
+      - TYPE=humidity
+      - MQTT_PERIOD=12
+      - NAME=HumiditySen2
